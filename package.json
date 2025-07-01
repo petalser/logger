@@ -1,0 +1,16 @@
+{
+  "name": "@petalser/logger",
+  "version": "0.1.0",
+  "description": "Logging utility for Node.js",
+  "license": "ISC",
+  "author": "Alex \"Petalser\" Petrychuk",
+  "keywords": [
+    "logger",
+    "console",
+    "express",
+    "logging"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts"
+}

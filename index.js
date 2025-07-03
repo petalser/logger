@@ -23,6 +23,25 @@ export default class Logger {
         this.log('ERROR', message, meta);
     }
 
+    static logRequest(baseUrl, method, body, responseResultString, responseStatusCode, responseData) {
+        const meta = {
+            request: {
+                baseUrl,
+                method,
+            },
+            response: {
+                code: responseStatusCode,
+                message: responseResultString,
+            }
+        }
+
+        if (responseData) meta.response.data = responseData
+        if (body) meta.request.body = body
+
+        const message = `Request [CODE:${responseStatusCode}] Result: [${responseResultString.toUpperCase()}]`
+        this.log("REQUEST", message, meta)
+    }
+
     /**
      * Core log method.
      * @param {string} type - Log type e.g. INFO, ERROR, WARN

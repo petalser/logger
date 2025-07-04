@@ -42,9 +42,8 @@ declare class Logger {
   * If Logger initialized, updates "./your-logs-path/info/error-xxx" file
   * @param {string} message - Enables file logging if provided.
   * @param {LoggerMeta} [meta] - Optional object with your information.
-  * @param {unknown} error - Error object, most likely of type Error.
   */
-  static error(message: string, error: unknown, meta?: LoggerMeta): void;
+  static error(message: string, meta?: LoggerMeta): void;
 }
 
 export = Logger;

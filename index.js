@@ -19,11 +19,9 @@ export default class Logger {
         this.log('INFO', message, meta);
     }
 
-    static error(message, error, meta = {}) {
-        const errName = error instanceof Error
-            ? error.name
-            : "Unknown Error"
-        this.log('ERROR', message, { error: errName, ...meta });
+    static error(message, meta = {}) {
+
+        this.log('ERROR', message, meta);
     }
 
     static logRequest(baseUrl, method, body, responseResultString, responseStatusCode, responseData) {
